@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <!-- Materialize CDN links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <!-- JQuery Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--   firebase link   -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
+    <!-- google autocomplete link -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSXRIONtBTM8PTsI8meEa8vHiEVlcZ2Qk&libraries=places"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>iRyde</h1>
+                <div class="inputForm input-wrapper">
+                    <form action="">
+                        <div class="input-field">
+                            <!--pickup location-->
+                            <input type="text" id="origin" class="input-origin" placeholder="">
+                            <label for="origin">Start Location</label>
+                            <div class="addressList" id="pp">
+                                <!--remove div content when fairebase is ready-->
+      
+                            </div>
+                        </div>
+                        <!--dropoff location-->
+                        <div class="input-field">
+                            <input type="text" id="destination" class="input-destination" placeholder="">
+                            <label for="destination">Destination</label>
+                            <div class="addressListTwo" id="dd">
+                                <!--remove div content when fairebase is ready-->
+
+                        </div>
+                        <!--submit request-->
+                        <button type="submit" id="getPrices" class="red btn-large waves-effect waves-light">Find the Cheapest Ride</button>
+                    </form>
+                </div>
+
+                <div id="origin-address"></div>
+                <div id="destination-address"></div>
+                <div id="display-distance"></div>
+                <div id="display-duration"></div>
+                <div id="uberPrice"></div>
+                <div id="lyftPrice"></div>
+                <h6>-All numbers are approximate values, surge pricing not factored into calculations</h6>
+
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="./assets/javascript/google.js" type="text/javascript"></script>
+    <script src="./assets/javascript/javascript.js" type="text/javascript"></script>
+
+</body>
+
+</html>
